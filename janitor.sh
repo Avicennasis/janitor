@@ -11,13 +11,11 @@ awk '{x+=$0}END{print x}' /cygdrive/d/Mil-Main/TEMP/TEMPSIZE > /cygdrive/d/Mil-M
 
 #Make the directory for janitor logs if it doesn't exist yet
 if [ ! -d ${HOME}/logs/janitor ]; then
-	echo "Janitor directory not found! Creating it now"
+	echo "Janitor directory not found! Creating it now."
 	mkdir -p "${HOME}/logs/janitor"
 fi
 
 #And make a dummy file for math to avoid first-run errors
-mkdir -p "${HOME}/logs/janitor"
-
 if [ ! -f ${HOME}/logs/janitor/tempsizeinbytes.txt ]; then
 	echo "Janitor log file not found! Creating a dummy file real quick"
 	echo 0 > ${HOME}/logs/janitor/tempsizeinbytes.txt
