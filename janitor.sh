@@ -33,7 +33,7 @@ rm /cygdrive/d/Mil-Main/TEMP/TEMPSIZETOTAL
 rm /cygdrive/d/Mil-Main/TEMP/TEMPSIZEFINALTOTAL
 
 #Make the directory for janitor logs if it doesn't exist yet
-if [ ! -d ${HOME}/logs/janitor ]; then
+if [ ! -d ${HOME}/logs/janitor/$(date -u +%Y/%m/ ]; then
 	echo "Janitor current year/month folder not found! Creating it now"
 	mkdir -p "${HOME}/logs/janitor/$(date -u +%Y/%m/)"
 fi
